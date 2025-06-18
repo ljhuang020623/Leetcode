@@ -23,3 +23,7 @@ if __name__ == '__main__':
     for test in tests:
         ans = sol.maxArea(test)
         print(ans)
+
+# Conclusion:
+# 1. do this in two pointer greedy initialize the two pointers on the 2 ends of the given array
+# 2. increment the smaller pointer by 1 if it is left decrement by 1 otherwise

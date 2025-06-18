@@ -18,8 +18,14 @@ if __name__ == '__main__':
         ans = sol.numRescueBoats(people, limit)
         print(ans)
 
+
+# Initial Thought:
+
 # only 2 ppl are allow on one boat
 # limit represent the max weight of one boat
 # return minimum boat to carry every given person 
-#
-        
+
+# Conclusion(2 pointer greedy):
+# 1. choose the maximum and minimum weight people and then pair them if their weight exceed the boat limit,
+#    then it means that maximum weight person has to be isolated hence u decrement the right pointer by 1 in people and go on and on
+# 2. if the weight is equal to the limit then u simply increment the left pointer by 1 to iterate through the people list      

@@ -6,7 +6,7 @@ class Solution:
         # total = 0
         # for i in range(len(bank)):
         #     count = 0
-        #     for j in range(len(bank[0])):
+        #     for j in ra nge(len(bank[0])):
         #         if bank[i][j] == '1':
         #             count += 1
         #     if count != 0:

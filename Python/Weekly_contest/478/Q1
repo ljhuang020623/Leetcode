@@ -1,0 +1,17 @@
+from typing import List
+class Solution:
+    def countElements(self, nums: List[int], k: int) -> int:
+        n = len(nums)
+        if k == 0:
+            return n
+        
+        l = n - 1
+        nums.sort()
+        while l > 0 and k > 0:
+            v = nums[l]
+            while l >= 0 and nums[l] == v:
+                l -= 1
+                k -= 1
+        return l + 1
+                
+        

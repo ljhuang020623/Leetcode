@@ -1,0 +1,23 @@
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+class Solution {
+public:
+    int countElements(vector<int>& nums, int k) {
+        int n = nums.size();
+        sort(nums.begin(), nums.end());
+        int result{0};
+        int l{n - 1};
+
+        while (l >= 0 && k > 0){
+            int val = nums[l];
+            while (l >= 0 && nums[l] == val){
+                l -= 1;
+                k -= 1;
+            }
+        }
+        return l + 1;
+    }
+}

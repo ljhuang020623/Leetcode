@@ -1,21 +1,11 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        pairs = {')': '(', ']': '[', '}': '{'}
+        pairs = {')' : '(', ']' : '[', '}' : '{'}
         stack = []
-        for char in s:
-            if char in '([{':
-                stack.append(char)
+        for ch in s:
+            if ch in pairs:
+                if not stack or stack.pop() != pairs[ch]:
+                    return False
             else:
-                if not stack:
-                    return False
-                last_bracket = stack.pop()
-                if pairs[char] != last_bracket:
-                    return False
+                stack.append(ch)
         return not stack
-
-if __name__ == '__main__': 
-    sol = Solution()
-    tests = ["()", "()[]{}", "(]", "([])", "([)]", '([)]']
-    for s in tests:
-        ans = sol.isValid(s)
-        print(ans)

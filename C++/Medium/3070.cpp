@@ -5,7 +5,7 @@ using namespace std;
 class Solution {
 public:
     int countSubmatrices(vector<vector<int>>& grid, int k) {
-
+        // 2D prefix sum in place 
         // Do the calculation in place 
         // Time Complexity: O(m * n), Space Complexity: O(1)
         int m = grid.size(), n = grid[0].size();
